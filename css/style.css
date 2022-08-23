@@ -35,6 +35,10 @@ h2{
     font-size: 1;
 }
 
+span{
+    font-size: 1;
+}
+
 img{
     width: 100%;
     display: block;
@@ -99,15 +103,47 @@ header .header-about__us{
 
 .container picture .container_picture .job{
     position: absolute;
+    padding-bottom: .8rem;
+    /* font-size: .9rem; */
+    font-weight: 700;
     rotate: 90deg;
     left: calc(100% - 25px);
     top: 2rem;
+    opacity: 0;
+    visibility: 0;
+    transition: var(--transition);
 }
+
+.container picture .container_picture:nth-child(3) .job{
+    position: absolute;
+    padding-bottom: 2rem;
+    /* font-weight: 400; */
+    rotate: 90deg;
+    left: calc(100% - 25px);
+    top: 2rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.container picture .container_picture:hover .job{
+    opacity: 1;
+}
+
+.container picture .container_picture img{
+    filter: saturate(0);
+    transition: var(--transition);  
+}
+
+.container picture .container_picture:hover img{
+    filter: saturate(1);
+}
+
 /* END CONTAIN */
 
 /* START FOOTER */
 footer{
     background: rgba(177, 174, 174, 0.699);
+    color: #000;
     justify-items: center;
     text-align: center;
     padding: 0.2rem 1.5rem 1.5rem;
